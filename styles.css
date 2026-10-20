@@ -45,6 +45,7 @@ figure { margin: 0; }
 }
 .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
 .eyebrow--light { color: rgba(255, 255, 255, .85); }
+.eyebrow > .hide-sm { margin-left: -7px; }
 
 .title {
   font-family: var(--serif); font-weight: 350; font-variation-settings: "opsz" 144;
