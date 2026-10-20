@@ -14,23 +14,23 @@ if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const group = new THREE.Group();
   scene.add(group);
 
-  // smooth sage knot
+  // polished gold knot
   const knot = new THREE.Mesh(
     new THREE.TorusKnotGeometry(1.05, 0.34, 220, 32, 2, 3),
-    new THREE.MeshPhysicalMaterial({ color: 0x8BA595, roughness: 0.28, metalness: 0.05, clearcoat: 1, clearcoatRoughness: 0.2, sheen: 1, sheenColor: 0xF6F2EA })
+    new THREE.MeshPhysicalMaterial({ color: 0xC9A86A, roughness: 0.22, metalness: 0.75, clearcoat: 1, clearcoatRoughness: 0.15 })
   );
   group.add(knot);
 
-  // small clay satellite
+  // small ivory satellite
   const dot = new THREE.Mesh(
     new THREE.SphereGeometry(0.2, 48, 48),
-    new THREE.MeshPhysicalMaterial({ color: 0xC4876A, roughness: 0.35, clearcoat: 1 })
+    new THREE.MeshPhysicalMaterial({ color: 0xEDE7DB, roughness: 0.3, clearcoat: 1, emissive: 0x332a1a })
   );
   group.add(dot);
 
-  scene.add(new THREE.HemisphereLight(0xFFFFFF, 0x4F6B5C, 1.4));
-  const key = new THREE.DirectionalLight(0xFFF4E6, 2.4); key.position.set(3, 4, 5); scene.add(key);
-  const rim = new THREE.DirectionalLight(0xD9E6DD, 1.6); rim.position.set(-4, -2, -3); scene.add(rim);
+  scene.add(new THREE.HemisphereLight(0xFFF2DC, 0x1A1D1B, 1.6));
+  const key = new THREE.DirectionalLight(0xFFF4E6, 3.2); key.position.set(3, 4, 5); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x9DB5A6, 2.4); rim.position.set(-4, -2, -3); scene.add(rim);
 
   const resize = () => {
     const w = canvas.clientWidth, h = canvas.clientHeight;
